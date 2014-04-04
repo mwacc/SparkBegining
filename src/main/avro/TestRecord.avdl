@@ -1,0 +1,8 @@
+@namespace("experiment.avro")
+protocol Experimets{
+    record TestRecord{
+        string field1="";
+        int field2=-1;
+        union {int, null} field3=null;
+    }
+}
