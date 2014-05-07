@@ -99,7 +99,7 @@
             <groupId>org.apache.avro</groupId>
             <artifactId>avro</artifactId>
             <version>${avro.version}</version>
-            <classifier>hadoop-2</classifier>
+
         </dependency>
         <dependency>
             <groupId>org.apache.avro</groupId>
