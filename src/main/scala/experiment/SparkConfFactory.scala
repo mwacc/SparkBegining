@@ -5,7 +5,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 /**
  * Created by Kostiantyn_Kudriavts on 4/2/2014.
  */
-trait SparkConfFactory {
+trait SparkConfFactory extends java.io.Serializable {
 
   def getConf(args: Array[String]): SparkContext = {
     if( args.length > 3 && "local".equals( args(args.length-2) ) )
@@ -21,6 +21,7 @@ trait SparkConfFactory {
       .setMaster("local")
       .setAppName("My Spark application")
       .set("spark.executor.memory", "1g")
+    //   .set("spark.cores.max", numCores) // maximum number of cores available for cluster (for standalone or Mesos instalation)
     val sc = new SparkContext(conf)
     return sc
   }
