@@ -20,7 +20,7 @@ trait SparkConfFactory extends java.io.Serializable {
     val conf = new SparkConf()
       .setMaster("local")
       .setAppName("My Spark application")
-      .set("spark.executor.memory", "1g")
+      .set("spark.executor.memory", "4g")
     //   .set("spark.cores.max", numCores) // maximum number of cores available for cluster (for standalone or Mesos instalation)
     val sc = new SparkContext(conf)
     return sc
